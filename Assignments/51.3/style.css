@@ -1,0 +1,55 @@
+.height{
+    min-height: 100vh;
+}
+.display{
+    display:flex;
+}
+.Content{
+    justify-content: center;
+}
+.flexDir{
+    flex-direction: column;
+}
+.alignItem{
+    align-items: center;
+}
+.gap{
+    gap:20px;
+}
+.width200{
+    width:200px;
+}
+.imgWidth{
+    width:200px;
+}
+.imgHeight{
+    height:200px;
+}
+.boxShadow{
+    box-shadow:0 0 10px rgba(0,0,0,0.8);
+}
+.paddingBottom{
+    padding-bottom:30px;
+}
+.padding{
+    padding:10px;
+}
+.buttonColor{
+    background-color: grey;
+}
+.buttonWidth{
+    width:100%;
+
+}
+.buttonPaddingTop{
+    padding-top:5px;
+}
+.buttonPaddingTop{
+    padding-bottom: 5px;
+}
+.buttonStyle{
+    border: none;
+}
+.buttonColor{
+    color:white;
+}
