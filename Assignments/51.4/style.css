@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.display{
+    display:flex;
+}
+.width{
+    width: 100%;
+}
+.height{
+    height:100vh;
+}
+.imgWidth{
+    width:50%;
+}
+.border{
+    border:2px solid black;
+}
+.background{
+    background-image: url(https://img.freepik.com/premium-photo/business-woman-entrepreneur-working-office-professional-employee-workplace-young-beautiful-secretary-girl_265223-28262.jpg?w=2000);
+}
+.bgRepeat{
+    background-repeat: no-repeat;
+}
+.bgCover{
+    background-size: cover;
+}
+.bgPosition{
+    background-position: center;
+}
+.headingColor{
+    color:blue;
+}
+.headingSize{
+    font-size:50px;
+}
+.paddingLeft{
+    padding-left:50px;
+}
+.paddingRight{
+    padding-right: 50px;
+}
+.margin{
+    margin:auto 0;
+}
+.backgroundColor{
+    background-color: rgb(227, 216, 236);
+}
+.paddingTop{
+    padding-top:10px;
+}
+.paddingBottom{
+    padding-bottom:30px;
+}
+.buttonBg1{
+    background-color: rgb(88, 88, 192);
+}
+.buttonColor1{
+    color:white
+}
+.buttonBg2{
+    background-color:white;
+}
+.buttonColor2{
+    color:blue;
+}
+.buttonPadding{
+    padding:15px 30px;
+}
+.buttonStyle{
+    border:none;
+}
+.ButtonRadius{
+    border-radius: 8px;;
+}
+.parColor{
+    color:grey
+}
