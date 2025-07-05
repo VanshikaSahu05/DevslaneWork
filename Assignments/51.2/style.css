@@ -1,0 +1,28 @@
+
+.bg-green{
+  background-color:green;
+}
+.height-500{
+  height:500px;
+}
+.Border1{
+  border-style:solid;
+}
+.BorderSize1{
+  border-width:10px;
+}
+.BorderSize2{
+  border-width:6px;
+}
+.Border2{
+  border-style:dotted;
+}
+.padding{
+  padding:20px;
+}
+.Display{
+  display:inline-block;
+}
+.textAlign{
+  text-Align:center;
+}
