@@ -1,17 +1,16 @@
 import { FaCartArrowDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { Formik,Form  } from "formik";
+import { withFormik  } from "formik";
 import * as Yup from "yup";
 import Input from "./Input";
 
-const LoginPage = () => {
-  function callApi(values) {
+function callApi(values) {
     console.log("called", values);
   }
 
   const schema = Yup.object().shape({
     email: Yup.string()
-      .min(3, "Invalid email format ")
+      .email("Invalid email format ")
       .required("Email is required"),
     password: Yup.string()
       .min(6, "Password must be at least 6 characters")
@@ -23,18 +22,27 @@ const LoginPage = () => {
 
   }
 
+export const LoginPage = ({handleSubmit,values,errors,touched,handleChange,handleBlur}) => {
+  
+
   return (
     <div className="flex justify-center items-center h-screen bg-cover bg-no-repeat bg-[url('https://tse1.mm.bing.net/th/id/OIP.nn8CQsrncHyC-RasmGfLSQHaEK?pid=Api&P=0&h=180')] px-4">
       <div className="flex flex-col items-center gap-6 w-full max-w-sm md:max-w-md bg-white/10 p-6 rounded-xl backdrop-blur-sm">
         <FaCartArrowDown className="text-white text-7xl md:text-9xl" />
-        <Formik initialValue={initialValue} onSubmit={callApi} validationSchema={schema} >
-          <Form  className="flex flex-col gap-3 w-full">
+        
+          <form onSubmit={handleSubmit}  className="flex flex-col gap-3 w-full">
           <Input
             label="EMAIL"
             id="email"
             name="email"
             type="email"
             placeholder="EMAIL"
+            value={values.email}
+            errors={errors.email}
+            touched={touched.email}
+            onChange={handleChange}
+            onBlur={handleBlur}
+
           />
 
           <Input
@@ -43,6 +51,11 @@ const LoginPage = () => {
             name="password"
             type="password"
             placeholder="PASSWORD"
+            value={values.password}
+            errors={errors.password}
+            touched={touched.password}
+            onChange={handleChange}
+            onBlur={handleBlur}
           />
 
           <button
@@ -63,15 +76,20 @@ const LoginPage = () => {
               SignUp
             </Link>{" "}
           </p>
-        </Form>
-        </Formik>
+        </form>
+        
 
       </div>
     </div>
   );
 };
+const myHoc = withFormik({
+   validationSchema:schema, initialValue:initialValue,handleSubmit:callApi
+})
 
-export default LoginPage;
+const login = myHoc(LoginPage)
+
+export default login;
 {
   /* <div className="flex gap-2 items-center border-2 border-white px-3 py-2 rounded">
             <FaUser className="text-white" />
