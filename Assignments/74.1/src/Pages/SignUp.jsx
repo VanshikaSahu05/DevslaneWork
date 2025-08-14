@@ -15,6 +15,7 @@ function callApi(values, bag) {
     })
     .then((response) => {
       console.log("Signup successful", response.data);
+      alert("signUp successfully");
     })
     .catch((error) => {
       if (error.response) {
