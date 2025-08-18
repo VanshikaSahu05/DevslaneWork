@@ -2,8 +2,8 @@ import { useState, type FC } from "react"
 import CompletedTaskRow from "./CompletedTaskRow";
 import { FaPlus } from "react-icons/fa";
 import type { TodoListProps } from "./TaskType";
-import TodoRow from "./TodoRow";
-import CreateTodo from "./CreateTodo";
+import TodoRow from "./ToDoRow";
+import CreateTodo from "./CreateToDo";
 
 
 const TodoList:FC<TodoListProps>=({tasks,completed,updateCompleted,updateTasks})=>{
