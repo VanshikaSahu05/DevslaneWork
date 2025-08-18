@@ -1,6 +1,6 @@
 import { useState } from "react"
 import CreateTodo from "./CreateTodo";
-import TodoRow from "./TodoRow";
+import TodoRow from "./ToDoRow";
 import CompletedTaskRow from "./CompletedTaskRow";
 import { FaPlus } from "react-icons/fa";
 export default function TodoList({tasks,completed,updateTasks,updateCompleted}){
