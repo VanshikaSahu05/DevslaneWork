@@ -1,0 +1,2 @@
+export const sampleTasks=[{"id":1,"title":"Clean my computer"},{"id":2,"title":"Buy a keyboard"}];
+export const sampleTasksDone=[{"id":3,"title":"Write an article about @xstate/test"},{"id":4,"title":"Write an article about @xstate"}];
